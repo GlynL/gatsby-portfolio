@@ -24,8 +24,15 @@ const Scroll = styled.a`
 
 const Header = ({ scrollToSection }) => (
   <Nav>
-    <Scroll onClick={scrollToSection}>Glyn</Scroll>
-    <Scroll onClick={scrollToSection}>Skills</Scroll>
+    <Scroll onClick={scrollToSection} id="home">
+      Glyn
+    </Scroll>
+    <Scroll onClick={scrollToSection} id="skills">
+      Skills
+    </Scroll>
+    <Scroll onClick={scrollToSection} id="first">
+      First
+    </Scroll>
   </Nav>
 )
 

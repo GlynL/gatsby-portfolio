@@ -7,39 +7,34 @@ import SkillsSection from "../components/SkillsSection"
 class IndexPage extends React.Component {
   constructor(props) {
     super(props)
+    this.home = React.createRef()
     this.first = React.createRef()
-    this.skillsSection = React.createRef()
+    this.skills = React.createRef()
 
     this.scrollToSection = this.scrollToSection.bind(this)
   }
 
   scrollToSection = e => {
-    switch (e.target.textContent) {
-      case "Skills":
-        this.skillsSection.current.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        })
-        return
-      case "First":
-        this.first.current.scrollIntoView({
-          behavior: "smooth",
-          block: "start",
-        })
-    }
+    const target = e.target.id
+    this[target].current.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    })
   }
 
   render() {
     return (
-      <>
+      <div ref={this.home}>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <Header scrollToSection={this.scrollToSection} />
         <div style={{ height: "1500px" }} />
-        <section ref={this.first}>First</section>
-        <SkillsSection ref={this.skillsSection} style={{ height: "1500px" }}>
+        <section ref={this.first} style={{ height: "1500px" }}>
+          First
+        </section>
+        <SkillsSection ref={this.skills} style={{ height: "1500px" }}>
           Skills
         </SkillsSection>
-      </>
+      </div>
     )
   }
 }
