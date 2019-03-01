@@ -27,10 +27,7 @@ class IndexPage extends React.Component {
       <div ref={this.home}>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <Header scrollToSection={this.scrollToSection} />
-        <div style={{ height: "1500px" }} />
-        <section ref={this.first} style={{ height: "1500px" }}>
-          First
-        </section>
+        First
         <SkillsSection ref={this.skills} style={{ height: "1500px" }}>
           Skills
         </SkillsSection>
