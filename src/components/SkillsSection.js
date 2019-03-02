@@ -19,6 +19,7 @@ const SkillsSection = React.forwardRef((props, ref) => {
         <Icon> {icons.css}</Icon>
         <Icon> {icons.javascript}</Icon>
         <Icon>{icons.react}</Icon>
+        <Icon>{icons.redux}</Icon>
         <Icon>{icons.node}</Icon>
         <Icon>{icons.mongodb}</Icon>
       </Grid>
