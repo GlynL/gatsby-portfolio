@@ -4,6 +4,7 @@ import SEO from "../components/seo"
 import Header from "../components/header"
 import IntroSection from "../components/IntroSection"
 import SkillsSection from "../components/SkillsSection"
+import ProjectsSection from "../components/ProjectsSection"
 
 class IndexPage extends React.Component {
   constructor(props) {
@@ -11,6 +12,7 @@ class IndexPage extends React.Component {
     this.home = React.createRef()
     this.first = React.createRef()
     this.skills = React.createRef()
+    this.projects = React.createRef()
 
     this.scrollToSection = this.scrollToSection.bind(this)
   }
@@ -30,6 +32,7 @@ class IndexPage extends React.Component {
         <Header scrollToSection={this.scrollToSection} />
         <IntroSection />
         <SkillsSection ref={this.skills} />
+        <ProjectsSection ref={this.projects} />
       </div>
     )
   }
