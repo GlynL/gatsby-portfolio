@@ -2,6 +2,7 @@ import React from "react"
 import SEO from "../components/seo"
 
 import Header from "../components/header"
+import IntroSection from "../components/IntroSection"
 import SkillsSection from "../components/SkillsSection"
 
 class IndexPage extends React.Component {
@@ -27,10 +28,8 @@ class IndexPage extends React.Component {
       <div ref={this.home}>
         <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
         <Header scrollToSection={this.scrollToSection} />
-        First
-        <SkillsSection ref={this.skills} style={{ height: "1500px" }}>
-          Skills
-        </SkillsSection>
+        <IntroSection />
+        <SkillsSection ref={this.skills} />
       </div>
     )
   }

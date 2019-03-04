@@ -2,27 +2,41 @@ import React from "react"
 import styled from "styled-components"
 import icons from "../assets/icons"
 
-const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(3, minmax(50px, 100px));
+import Heading from "./Heading"
+import Title from "./Title"
+
+const Row = styled.div`
+  display: flex;
   justify-content: center;
 `
 
-const Icon = styled.div``
+const Icon = styled.div`
+  height: 150px;
+  width: 150px;
+  margin: 10px;
+`
 
 const SkillsSection = React.forwardRef((props, ref) => {
   return (
     <section ref={ref}>
-      <h1>Skills</h1>
-      <Grid>
-        <Icon>{icons.html}</Icon>
-        <Icon> {icons.css}</Icon>
-        <Icon> {icons.javascript}</Icon>
-        <Icon>{icons.react}</Icon>
-        <Icon>{icons.redux}</Icon>
-        <Icon>{icons.node}</Icon>
-        <Icon>{icons.mongodb}</Icon>
-      </Grid>
+      <Heading>
+        <Title>Skills</Title>
+      </Heading>
+      <div>
+        <Row>
+          <Icon>{icons.html}</Icon>
+          <Icon> {icons.css}</Icon>
+          <Icon> {icons.javascript}</Icon>
+        </Row>
+        <Row>
+          <Icon>{icons.react}</Icon>
+          <Icon>{icons.redux}</Icon>
+        </Row>
+        <Row>
+          <Icon>{icons.node}</Icon>
+          <Icon>{icons.mongodb}</Icon>
+        </Row>
+      </div>
     </section>
   )
 })

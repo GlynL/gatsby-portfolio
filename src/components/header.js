@@ -30,9 +30,6 @@ const Header = ({ scrollToSection }) => (
     <Scroll onClick={scrollToSection} id="skills">
       Skills
     </Scroll>
-    <Scroll onClick={scrollToSection} id="first">
-      First
-    </Scroll>
   </Nav>
 )
 
