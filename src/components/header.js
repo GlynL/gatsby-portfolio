@@ -10,9 +10,9 @@ const Nav = styled.nav`
   padding: 0.5rem;
 `
 
-const StyledDiv = styled.div`
-  margin-left: auto;
-`
+// const StyledDiv = styled.div`
+//   margin-left: auto;
+// `
 
 const Scroll = styled.a`
   padding: 0 0.5rem;
