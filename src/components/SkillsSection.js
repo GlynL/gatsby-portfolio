@@ -16,29 +16,27 @@ const Icon = styled.div`
   margin: 10px;
 `
 
-const SkillsSection = React.forwardRef((props, ref) => {
-  return (
-    <section ref={ref}>
-      <Heading>
-        <Title>Skills</Title>
-      </Heading>
-      <div>
-        <Row>
-          <Icon>{icons.html}</Icon>
-          <Icon> {icons.css}</Icon>
-          <Icon> {icons.javascript}</Icon>
-        </Row>
-        <Row>
-          <Icon>{icons.react}</Icon>
-          <Icon>{icons.redux}</Icon>
-        </Row>
-        <Row>
-          <Icon>{icons.node}</Icon>
-          <Icon>{icons.mongodb}</Icon>
-        </Row>
-      </div>
-    </section>
-  )
-})
+const SkillsSection = () => (
+  <section id="skills">
+    <Heading>
+      <Title>Skills</Title>
+    </Heading>
+    <div>
+      <Row>
+        <Icon>{icons.html}</Icon>
+        <Icon> {icons.css}</Icon>
+        <Icon> {icons.javascript}</Icon>
+      </Row>
+      <Row>
+        <Icon>{icons.react}</Icon>
+        <Icon>{icons.redux}</Icon>
+      </Row>
+      <Row>
+        <Icon>{icons.node}</Icon>
+        <Icon>{icons.mongodb}</Icon>
+      </Row>
+    </div>
+  </section>
+)
 
 export default SkillsSection

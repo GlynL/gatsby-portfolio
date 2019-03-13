@@ -14,7 +14,7 @@ export default ({ project }) => {
   const techs = project.technologies.map(tech => <Tech key={tech}>{tech}</Tech>)
   return (
     <div>
-      <Img fixed={project.img} />
+      {/*<Img fixed={project.img} />*/}
       <ul>{techs}</ul>
       <p>{project.description}</p>
       <Button>
