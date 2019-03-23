@@ -27,6 +27,7 @@ const Header = ({ scrollToSection }) => (
     <Scroll href="#home">Glyn</Scroll>
     <Scroll href="#skills">Skills</Scroll>
     <Scroll href="#projects">Projects</Scroll>
+    <Scroll href="#blog">Blog</Scroll>
   </Nav>
 )
 

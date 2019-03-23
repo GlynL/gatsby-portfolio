@@ -3,6 +3,7 @@ import projects from "../assets/projects"
 import Project from "./Project"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
+import { addImageToItems } from "../helpers/helpers.js"
 
 const Container = styled.div`
   display: grid;
@@ -33,16 +34,8 @@ export default () => (
 
 const ProjectsList = ({ data }) => {
   // match project imagePath with graphql image src
-  const projectsWithImage = projects.map(project => {
-    // matches first image to include the imagePath in src
-    const image = data.allFile.edges.find(edge => {
-      const imageSrc = edge.node.childImageSharp.fixed.src
-      return imageSrc.includes(project.imagePath)
-    })
-    // add image onto project obj
-    project.image = image
-    return project
-  })
+  const projectsWithImage = addImageToItems(data, projects)
+
   const projectsList = projectsWithImage.map(project => (
     <Project project={project} />
   ))

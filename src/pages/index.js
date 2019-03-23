@@ -7,6 +7,7 @@ import Header from "../components/header"
 import IntroSection from "../components/IntroSection"
 import SkillsSection from "../components/SkillsSection"
 import ProjectsSection from "../components/ProjectsSection"
+import BlogSection from "../components/BlogSection"
 
 const IndexPage = () => (
   <div>
@@ -15,6 +16,7 @@ const IndexPage = () => (
     <IntroSection />
     <SkillsSection />
     <ProjectsSection />
+    <BlogSection />
   </div>
 )
 
