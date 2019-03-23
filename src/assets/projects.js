@@ -6,6 +6,8 @@ export default [
     technologies: ["Wordpress", "HTML5", "CSS3", "Javascript"],
     site: "https://www.glynlewington.com",
     github: "https://www.github.com/glynl",
+    imagePath:
+      "hydrohealth.png" /* must match name of image in projects folder */,
   },
   {
     title: "Simon-Game",
@@ -14,6 +16,7 @@ export default [
     technologies: ["HTML5", "CSS3", "Javascript"],
     site: "https://www.glynlewington.com",
     github: "https://www.github.com/glynl",
+    imagePath: "simon-game.png",
   },
   {
     title: "TicTacToe",
@@ -22,5 +25,6 @@ export default [
     technologies: ["HTML5", "CSS3", "Javascript"],
     site: "https://www.glynlewington.com",
     github: "https://www.github.com/glynl",
+    imagePath: "tictactoe.png",
   },
 ]

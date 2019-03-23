@@ -15,9 +15,12 @@ const Icon = styled.div`
   width: 150px;
   margin: 10px;
 `
+const Section = styled.section`
+  background: #fdfdfd;
+`
 
 const SkillsSection = () => (
-  <section id="skills">
+  <Section id="skills">
     <Heading>
       <Title>Skills</Title>
     </Heading>
@@ -36,7 +39,7 @@ const SkillsSection = () => (
         <Icon>{icons.mongodb}</Icon>
       </Row>
     </div>
-  </section>
+  </Section>
 )
 
 export default SkillsSection

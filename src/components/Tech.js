@@ -12,7 +12,7 @@ const Tech = styled.li`
   transition: all 0.2s ease;
   display: inline-block;
   list-style: none;
-  margin: 0 5px;
+  margin: 5px;
 
   :hover,
   :active,
