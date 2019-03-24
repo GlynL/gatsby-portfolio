@@ -34,7 +34,6 @@ const Links = styled.div`
 `
 
 const LinkButton = styled(Button)`
-  color: red;
   margin: 5px;
 `
 

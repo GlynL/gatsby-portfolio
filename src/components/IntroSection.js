@@ -1,8 +1,10 @@
 import React from "react"
+import { StaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 import styled from "styled-components"
-import icons from "../assets/icons"
+import LinkList from "./LinkList"
 
-const Wrapper = styled.section`
+const Section = styled.section`
   height: 100vh;
 `
 const Centered = styled.div`
@@ -13,72 +15,50 @@ const Centered = styled.div`
   height: 100%;
 `
 
-const List = styled.ul`
-  display: flex;
-  align-items: baseline;
-  list-style: none;
-  padding: 0;
-`
-const Item = styled.li`
-  height: 30px;
-  width: 30px;
-  margin: 0 5px;
-`
-const Link = styled.a`
-  color: inherit;
-`
-
 const Header = styled.header`
   text-align: center;
 `
 
-const IntroSection = () => (
-  <Wrapper id="intro">
+export default () => (
+  <StaticQuery
+    query={graphql`
+      query {
+        backgroundImage: file(relativePath: { eq: "background-orig.jpg" }) {
+          childImageSharp {
+            fluid {
+              ...GatsbyImageSharpFluid
+            }
+          }
+        }
+      }
+    `}
+    render={data => <IntroSection data={data} />}
+  />
+)
+
+const IntroSection = ({ data }) => (
+  <Section id="intro">
     <Centered>
+      {
+        // using gatsby-image for background image
+        // https://github.com/gatsbyjs/gatsby/issues/2470#issuecomment-370933169
+      }
+      <Img
+        style={{
+          position: "fixed",
+          left: 0,
+          top: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: -1,
+        }}
+        fluid={data.backgroundImage.childImageSharp.fluid}
+      />
       <Header>
         <h1>Glyn Lewington</h1>
         <p>Web Developer</p>
       </Header>
-      <List>
-        <Item>
-          <Link
-            href="https://github.com/glynl"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {icons.github}
-          </Link>
-        </Item>
-        <Item>
-          <Link
-            href="https://twitter.com/GlynWebDev"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {icons.twitter}
-          </Link>
-        </Item>
-        <Item>
-          <Link
-            href="https://www.linkedin.com/in/glynlewington/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {icons.linkedin}
-          </Link>
-        </Item>
-        <Item>
-          <Link
-            href="https://medium.com/@glynlewington"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            {icons.medium}
-          </Link>
-        </Item>
-      </List>
+      <LinkList />
     </Centered>
-  </Wrapper>
+  </Section>
 )
-
-export default IntroSection

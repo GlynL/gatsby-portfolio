@@ -1,4 +1,3 @@
-import React from "react"
 import styled from "styled-components"
 
 const Button = styled.button`
@@ -7,7 +6,6 @@ const Button = styled.button`
   border-radius: 5px;
   padding: 5px 10px;
   color: #fcfcfc;
-  margin: 5px;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -20,4 +18,4 @@ const Button = styled.button`
   }
 `
 
-export default props => <Button>{props.children}</Button>
+export default Button

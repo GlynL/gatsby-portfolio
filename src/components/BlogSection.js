@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import styled from "styled-components"
 import articles from "../assets/articles.js"
 import { addImageToItems } from "../helpers/helpers.js"
 import Heading from "./Heading"
@@ -18,6 +19,12 @@ var settings = {
   slidesToScroll: 1,
   centerPadding: "100px",
 }
+
+const Section = styled.section`
+  background: #fdfdfd;
+  padding: 50px;
+  padding-top: 0px;
+`
 
 export default () => (
   <StaticQuery
@@ -50,13 +57,13 @@ const BlogSection = ({ data }) => {
     </div>
   ))
   return (
-    <section id="blog">
+    <Section id="blog">
       <Heading>
         <Title>Blog</Title>
       </Heading>
       <div style={{ width: "50%", margin: "auto", textAlign: "center" }}>
         <Slider {...settings}>{slides}</Slider>
       </div>
-    </section>
+    </Section>
   )
 }
