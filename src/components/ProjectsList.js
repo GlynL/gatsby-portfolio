@@ -35,9 +35,8 @@ export default () => (
 const ProjectsList = ({ data }) => {
   // match project imagePath with graphql image src
   const projectsWithImage = addImageToItems(data, projects)
-
   const projectsList = projectsWithImage.map(project => (
-    <Project project={project} />
+    <Project project={project} key={project.title} />
   ))
   return <Container>{projectsList}</Container>
 }

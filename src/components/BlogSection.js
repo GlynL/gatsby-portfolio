@@ -1,7 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
-import styled from "styled-components"
+
 import articles from "../assets/articles.js"
 import { addImageToItems } from "../helpers/helpers.js"
 
@@ -46,9 +46,8 @@ export default () => (
 const BlogSection = ({ data }) => {
   // image added to data under image
   const articlesWithImages = addImageToItems(data, articles)
-  console.log(articlesWithImages)
   const slides = articlesWithImages.map(article => (
-    <div>
+    <div key={article.title}>
       <Img fixed={article.image.node.childImageSharp.fixed} />
     </div>
   ))
