@@ -12,8 +12,10 @@ const Row = styled.div`
 `
 
 const Icon = styled.div`
-  height: 150px;
-  width: 150px;
+  min-height: 100px;
+  min-width: 100px;
+  max-height: 150px;
+  max-width: 150px;
   margin: 10px;
 `
 
