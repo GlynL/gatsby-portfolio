@@ -2,6 +2,7 @@ import React from "react"
 import styled from "styled-components"
 import icons from "../assets/icons"
 
+import Section from "./Section"
 import Heading from "./Heading"
 import Title from "./Title"
 
@@ -14,9 +15,6 @@ const Icon = styled.div`
   height: 150px;
   width: 150px;
   margin: 10px;
-`
-const Section = styled.section`
-  background: #fdfdfd;
 `
 
 const SkillsSection = () => (

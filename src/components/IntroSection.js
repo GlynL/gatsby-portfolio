@@ -30,6 +30,14 @@ export default () => (
             }
           }
         }
+
+        portraitPic: file(relativePath: { eq: "portrait-pic.jpg" }) {
+          childImageSharp {
+            fixed(width: 150, height: 150) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
     `}
     render={data => <IntroSection data={data} />}
@@ -56,6 +64,10 @@ const IntroSection = ({ data }) => (
       />
       <Header>
         <h1>Glyn Lewington</h1>
+        <Img
+          style={{ borderRadius: "50%" }}
+          fixed={data.portraitPic.childImageSharp.fixed}
+        />
         <p>Web Developer</p>
       </Header>
       <LinkList />

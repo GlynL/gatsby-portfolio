@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Glyn Lewington Portfolio`,
+    description: `Web development portfolio of Glyn Lewington.`,
+    author: `Glyn Lewington`,
   },
   plugins: [
     `gatsby-plugin-styled-components`,
@@ -25,7 +25,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/background-orig.jpg`, // This path is relative to the root of the site.
+        icon: `src/images/portrait-pic.jpg`, // This path is relative to the root of the site.
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

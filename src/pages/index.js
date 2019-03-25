@@ -1,5 +1,6 @@
 import React from "react"
 import SEO from "../components/seo"
+import { Helmet } from "react-helmet" /* doubled in seo */
 
 import "../styles/normalize.css"
 import "../styles/styles.css"
@@ -14,7 +15,16 @@ import Footer from "../components/footer"
 
 const IndexPage = () => (
   <div>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Glyn Lewington Portfolio"
+      keywords={[`glyn lewington`, `portfolio`, `web developer`]}
+    />
+    <Helmet>
+      <link
+        href="https://fonts.googleapis.com/css?family=Lato|Merriweather:400,700"
+        rel="stylesheet"
+      />
+    </Helmet>
     <Header />
     <IntroSection />
     <SkillsSection />

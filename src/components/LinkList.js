@@ -11,7 +11,7 @@ const List = styled.ul`
 const Item = styled.li`
   height: 30px;
   width: 30px;
-  margin: 0 5px;
+  margin: 0 10px;
 `
 const Link = styled.a`
   color: inherit;

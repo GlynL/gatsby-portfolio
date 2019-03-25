@@ -3,10 +3,7 @@ import styled from "styled-components"
 import Heading from "./Heading"
 import Title from "./Title"
 import Button from "./Button"
-
-const Section = styled.section`
-  background: #f2f2f2;
-`
+import Section from "./Section"
 
 const Form = styled.form`
   display: -webkit-box;
@@ -68,7 +65,7 @@ export default () => {
   }
 
   return (
-    <Section id="contact">
+    <Section dark={true} id="contact">
       <Heading>
         <Title>Contact</Title>
       </Heading>

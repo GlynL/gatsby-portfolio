@@ -4,6 +4,8 @@ import Img from "gatsby-image"
 import styled from "styled-components"
 import articles from "../assets/articles.js"
 import { addImageToItems } from "../helpers/helpers.js"
+
+import Section from "./Section"
 import Heading from "./Heading"
 import Title from "./Title"
 
@@ -19,12 +21,6 @@ var settings = {
   slidesToScroll: 1,
   centerPadding: "100px",
 }
-
-const Section = styled.section`
-  background: #fdfdfd;
-  padding: 50px;
-  padding-top: 0px;
-`
 
 export default () => (
   <StaticQuery
