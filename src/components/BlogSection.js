@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import styled from "styled-components"
 
 import articles from "../assets/articles.js"
 import { addImageToItems } from "../helpers/helpers.js"
@@ -30,8 +31,8 @@ export default () => (
           edges {
             node {
               childImageSharp {
-                fixed(width: 420, height: 300) {
-                  ...GatsbyImageSharpFixed
+                fluid(maxWidth: 420) {
+                  ...GatsbyImageSharpFluid
                 }
               }
             }
@@ -43,12 +44,20 @@ export default () => (
   />
 )
 
+const Wrapper = styled.div`
+  max-width: 1000px;
+  margin: auto;
+`
+
 const BlogSection = ({ data }) => {
   // image added to data under image
-  const articlesWithImages = addImageToItems(data, articles)
+  const articlesWithImages = addImageToItems(data, articles, "fluid")
   const slides = articlesWithImages.map(article => (
     <div key={article.title}>
-      <Img fixed={article.image.node.childImageSharp.fixed} />
+      <Img
+        fluid={article.image.node.childImageSharp.fluid}
+        style={{ maxWidth: "420px", margin: "auto" }}
+      />
     </div>
   ))
   return (
@@ -56,9 +65,9 @@ const BlogSection = ({ data }) => {
       <Heading>
         <Title>Blog</Title>
       </Heading>
-      <div style={{ width: "50%", margin: "auto", textAlign: "center" }}>
+      <Wrapper>
         <Slider {...settings}>{slides}</Slider>
-      </div>
+      </Wrapper>
     </Section>
   )
 }
