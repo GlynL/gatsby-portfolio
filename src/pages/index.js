@@ -11,7 +11,7 @@ import SkillsSection from "../components/SkillsSection"
 import ProjectsSection from "../components/ProjectsSection"
 import BlogSection from "../components/BlogSection"
 import ContactSection from "../components/ContactSection"
-import Footer from "../components/footer"
+import Footer from "../components/Footer"
 
 const IndexPage = () => (
   <div>
