@@ -8,7 +8,11 @@ import { addImageToItems } from "../helpers/helpers.js"
 const Container = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
   justify-items: center;
+  @media only screen and (min-width: 1000px) {
+    margin: 0 10rem;
+  }
 `
 
 export default () => (
