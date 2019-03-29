@@ -70,7 +70,7 @@ export default () => {
         <Title>Contact</Title>
       </Heading>
 
-      <Form action="https://Fspree.io/glynlewington@gmail.com" method="POST">
+      <Form action="https://formspree.io/glynlewington@gmail.com" method="POST">
         <Input
           type="text"
           name="name"
