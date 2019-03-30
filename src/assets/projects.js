@@ -1,21 +1,21 @@
 export default [
-  {
-    title: "Hydrohealth",
-    description:
-      "Business website for client. Created a custom WordPress theme for design.",
-    technologies: ["Wordpress", "HTML5", "CSS3", "Javascript"],
-    site: "https://www.glynlewington.com",
-    github: "https://www.github.com/glynl",
-    imagePath:
-      "hydrohealth.png" /* must match name of image in projects folder */,
-  },
+  // {
+  //   title: "Hydrohealth",
+  //   description:
+  //     "Business website for client. Created a custom WordPress theme for design.",
+  //   technologies: ["Wordpress", "HTML5", "CSS3", "Javascript"],
+  //   site: "https://www.glynlewington.com",
+  //   github: "https://www.github.com/glynl",
+  //   imagePath:
+  //     "hydrohealth.png" /* must match name of image in projects folder */,
+  // },
   {
     title: "Simon Game",
     description:
       "Simon Game challenge completed for FreeCodeCamp Frontend Certificate.",
     technologies: ["HTML5", "CSS3", "Javascript"],
-    site: "https://www.glynlewington.com",
-    github: "https://www.github.com/glynl",
+    site: "https://simon.glynlewington.com",
+    github: "https://www.github.com/GlynL/simon-game",
     imagePath: "simon-game.png",
   },
   {
@@ -23,8 +23,8 @@ export default [
     description:
       "TicTacToe challenge completed for FreeCodeCamp Frontend Certificate. Utilises minimax algorithm for unbeatable AI.",
     technologies: ["HTML5", "CSS3", "Javascript"],
-    site: "https://www.glynlewington.com",
-    github: "https://www.github.com/glynl",
+    site: "https://tictactoe.glynlewington.com",
+    github: "https://www.github.com/GlynL/TicTacToe",
     imagePath: "tictactoe.png",
   },
   {
@@ -32,8 +32,8 @@ export default [
     description:
       "Converts text into markdown for side-by-side preview. Completed for FreeCodeCamp Challenge.",
     technologies: ["React", "HTML5", "CSS3", "Javascript"],
-    site: "https://www.glynlewington.com",
-    github: "https://www.github.com/glynl",
+    site: "https://markdown.glynlewington.com",
+    github: "https://www.github.com/glynl/markdown-previewer",
     imagePath: "markdown.png",
   },
   {
@@ -48,8 +48,8 @@ export default [
       "Javascript",
       "Bootstrap",
     ],
-    site: "https://www.glynlewington.com",
-    github: "https://www.github.com/glynl",
+    site: "https://paihousing.herokuapp.com/",
+    github: "https://github.com/GlynL/housing",
     imagePath: "project-paihousing.png",
   },
   {
@@ -64,8 +64,9 @@ export default [
       "CSS3",
       "Javascript",
     ],
-    site: "https://www.glynlewington.com",
-    github: "https://www.github.com/glynl",
+    site: "https://recipes.glynlewington.com",
+    github: "https://www.github.com/GlynL/recipe-box--client",
+    githubApi: "https://github.com/GlynL/recipe-box--api",
     imagePath: "project-recipebox.png",
   },
   {
@@ -81,8 +82,9 @@ export default [
       "CSS3",
       "Javascript",
     ],
-    site: "https://www.glynlewington.com",
-    github: "https://www.github.com/glynl",
+    site: "https://issues.glynlewington.com",
+    github: "https://www.github.com/GlynL/issue-tracker--client",
+    githubApi: "https://github.com/GlynL/issue-tracker--api",
     imagePath: "project-issue-tracker.png",
   },
   {
@@ -99,8 +101,9 @@ export default [
       "Javascript",
       "Bootstrap",
     ],
-    site: "https://www.glynlewington.com",
-    github: "https://www.github.com/glynl",
+    site: "https://messageboard.glynlewington.com",
+    github: "https://www.github.com/GlynL/messageboard--client",
+    githubApi: "https://github.com/GlynL/messageboard--api",
     imagePath: "project-messageboard.png",
   },
 ]

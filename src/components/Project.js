@@ -56,6 +56,13 @@ export default ({ project }) => {
               Github
             </Anchor>
           </LinkButton>
+          {project.githubApi && (
+            <LinkButton>
+              <Anchor href={project.githubApi} target="_blank">
+                Github Api
+              </Anchor>
+            </LinkButton>
+          )}
         </Links>
       </Description>
     </Card>
