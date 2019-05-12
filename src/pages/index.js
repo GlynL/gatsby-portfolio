@@ -1,6 +1,6 @@
 import React from "react"
-import SEO from "../components/seo"
 import { Helmet } from "react-helmet" /* doubled in seo */
+import SEO from "../components/seo"
 
 import "../styles/normalize.css"
 import "../styles/styles.css"

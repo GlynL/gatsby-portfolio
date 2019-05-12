@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
 
+import Slider from "react-slick"
 import articles from "../assets/articles.js"
 import { addImageToItems } from "../helpers/helpers.js"
 
@@ -10,11 +11,10 @@ import Section from "./Section"
 import Heading from "./Heading"
 import Title from "./Title"
 
-import Slider from "react-slick"
 import "slick-carousel/slick/slick-theme.css"
 import "slick-carousel/slick/slick.css"
 // slider settings
-var settings = {
+const settings = {
   dots: true,
   infinite: true,
   speed: 500,
@@ -53,12 +53,17 @@ const BlogSection = ({ data }) => {
   // image added to data under image
   const articlesWithImages = addImageToItems(data, articles, "fluid")
   const slides = articlesWithImages.map(article => (
-    <div key={article.title}>
+    <a
+      href={article.link}
+      rel="noopener noreferrer"
+      target="_blank"
+      key={article.title}
+    >
       <Img
         fluid={article.image.node.childImageSharp.fluid}
         style={{ maxWidth: "420px", margin: "auto" }}
       />
-    </div>
+    </a>
   ))
   return (
     <Section id="blog">

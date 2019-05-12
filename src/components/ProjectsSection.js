@@ -6,7 +6,7 @@ import Title from "./Title"
 import ProjectsList from "./ProjectsList"
 
 const ProjectsSection = () => (
-  <Section dark={true} id="projects">
+  <Section dark id="projects">
     <Heading>
       <Title>Projects</Title>
     </Heading>

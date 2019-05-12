@@ -1,9 +1,9 @@
 import React from "react"
-import projects from "../assets/projects"
-import Project from "./Project"
 import { StaticQuery, graphql } from "gatsby"
 import styled from "styled-components"
-import { addImageToItems } from "../helpers/helpers.js"
+import projects from "../assets/projects"
+import Project from "./Project"
+import { addImageToItems } from "../helpers/helpers"
 
 const Container = styled.div`
   display: grid;

@@ -65,7 +65,7 @@ export default () => {
   }
 
   return (
-    <Section dark={true} id="contact">
+    <Section dark id="contact">
       <Heading>
         <Title>Contact</Title>
       </Heading>
