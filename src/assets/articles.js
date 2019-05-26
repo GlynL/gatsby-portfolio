@@ -6,6 +6,12 @@ export default [
     imagePath: "blog-image-upload.png",
   },
   {
+    title: "Hosting Git Repository on a Subdomain w/ Netlify",
+    link:
+      "https://medium.freecodecamp.org/how-to-host-a-git-repository-on-a-subdomain-with-netlify-b8afb5fca96e",
+    imagePath: "blog-subdomain-netlify.png",
+  },
+  {
     title: "TicTacToe - Unbeatable Minimax Algorithm",
     link:
       "https://medium.com/@glynlewington/tictactoe-unbeatable-minimax-algorithm-2b843207d326",
