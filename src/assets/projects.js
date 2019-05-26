@@ -37,6 +37,15 @@ export default [
     imagePath: "markdown.png",
   },
   {
+    title: "Netflix Clone",
+    description:
+      "Clone of Netflix movies page. Animated with react-spring. Uses 'The Movie Database' api for movie information.",
+    technologies: ["React", "HTML5", "CSS3", "Javascript"],
+    site: "https://netflix.glynlewington.com",
+    github: "https://www.github.com/glynl/netflix-clone",
+    imagePath: "project-netflix.png",
+  },
+  {
     title: "Pai Housing",
     description: "Application to find or rent a house in Pai.",
     technologies: [
