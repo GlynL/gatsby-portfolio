@@ -38,13 +38,15 @@ const LinkButton = styled(Button)`
 `
 
 export default ({ project }) => {
+  const dangerousDescription = { __html: project.description };
+
   const techs = project.technologies.map(tech => <Tech key={tech}>{tech}</Tech>)
   return (
     <Card>
       <Img fixed={project.image.node.childImageSharp.fixed} />
       <Description>
         <TechList>{techs}</TechList>
-        <p>{project.description}</p>
+        <div dangerouslySetInnerHTML={dangerousDescription}/>
         <Links>
           <LinkButton>
             <Anchor href={project.site} target="_blank">
