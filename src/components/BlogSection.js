@@ -62,6 +62,8 @@ const BlogSection = ({ data }) => {
       <Img
         fluid={article.image.node.childImageSharp.fluid}
         style={{ maxWidth: "420px", margin: "auto" }}
+        alt={article.title}
+        title={article.title}
       />
     </a>
   ))
